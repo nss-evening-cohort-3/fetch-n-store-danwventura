@@ -1,16 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div class="text-center">
+<div class="text-center" ng-controller="HomeCtrl">
+
+    <p>{{value}}</p>
     <form>
-        <select class="selectpicker">
+        <select class="selectpicker" ng-model="users_input_method">
             <option>HEAD</option>
             <option>GET</option>
         </select>
 
-        <input type="text" placeholder="URL HERE" name="URL" />
-        <button>FETCH</button>
-        <button>STORE</button>
+
+        <input type="text" placeholder="URL HERE" name="URL" ng-model="users_input_url"/>
+        <button ng-click="GetAjaxResponseData(users_input_url, users_input_method)">FETCH</button>
     </form>
 </div>
 
