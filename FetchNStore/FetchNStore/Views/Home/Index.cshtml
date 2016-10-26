@@ -1,14 +1,30 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<h1>{{2+2}}</h1>
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="text-center" ng-controller="HomeCtrl">
+
+    <p>{{value}}</p>
+    <form>
+        <select class="selectpicker" ng-model="users_input_method">
+            <option>HEAD</option>
+            <option>GET</option>
+        </select>
+
+
+        <input type="text" placeholder="URL HERE" name="URL" ng-model="users_input_url"/>
+        <button ng-click="GetAjaxResponseData(users_input_url, users_input_method)">FETCH</button>
+
+
+        <div>
+            <h4>URL: </h4><h5>{{URL}}</h5>
+            <h4>Method:</h4><h5>{{Method}}</h5>
+            <h4>Status Code:</h4><h5>{{StatusCode}}</h5>
+            <h4>Response Time:</h4><h5>{{ResponseTime}}</h5>
+        </div>
+    </form>
 </div>
 
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
@@ -28,4 +44,4 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
-</div>
+</div>*@

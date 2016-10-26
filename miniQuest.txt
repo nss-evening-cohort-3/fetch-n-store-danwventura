@@ -4,3 +4,21 @@ Find URLS
 2 URLS - return 400
 2 URLS - return 500
 1 URLS - return 300
+
+
+
+200 - 
+httpstat.us/200
+httpstat.us/201
+
+300 - 
+httpstat.us/305
+
+
+400 - 
+httpstat.us/400
+httpstat.us/402
+
+500 - 
+httpstat.us/502
+httpstat.us/520

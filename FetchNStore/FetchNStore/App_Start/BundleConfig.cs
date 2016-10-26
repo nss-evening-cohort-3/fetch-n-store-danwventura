@@ -25,7 +25,9 @@ namespace FetchNStore
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.js",
-                      "~/Scripts/app.js"));
+                      "~/Scripts/app.js",
+                      "~/Scripts/Home.Ctrl.js",
+                      "~/Scripts/AjaxFactory.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
