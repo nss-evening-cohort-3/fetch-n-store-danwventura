@@ -13,6 +13,14 @@
 
         <input type="text" placeholder="URL HERE" name="URL" ng-model="users_input_url"/>
         <button ng-click="GetAjaxResponseData(users_input_url, users_input_method)">FETCH</button>
+
+
+        <div>
+            <h4>URL: </h4><h5>{{URL}}</h5>
+            <h4>Method:</h4><h5>{{Method}}</h5>
+            <h4>Status Code:</h4><h5>{{StatusCode}}</h5>
+            <h4>Response Time:</h4><h5>{{ResponseTime}}</h5>
+        </div>
     </form>
 </div>
 
