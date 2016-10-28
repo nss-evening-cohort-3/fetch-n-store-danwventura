@@ -18,5 +18,11 @@ namespace FetchNStore.Tests.DAL
             Assert.IsNotNull(new_response);
 
         }
+
+        [TestMethod]
+        public void ()
+        {
+
+        }
     }
 }
