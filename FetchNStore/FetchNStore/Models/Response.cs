@@ -17,6 +17,8 @@ namespace FetchNStore.Models
         [Required]
         public string URL { get; set; }
         [Required]
-        public int Response_Time { get; set; }
+        public string Response_Time { get; set; }
+        [Required]
+        public DateTime TimeOfDay { get; set; }
     }
 }

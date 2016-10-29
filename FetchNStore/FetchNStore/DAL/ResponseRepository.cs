@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FetchNStore.Models;
 
 namespace FetchNStore.DAL
 {
@@ -18,6 +19,18 @@ namespace FetchNStore.DAL
         public ResponseRepository(ResponseContext _context)
         {
             Context = _context;
+        }
+
+        public List<Response> GetAllResponses()
+        {
+            List<Response> all_responses = Context.Responses.ToList();
+            return all_responses;
+        }
+
+        public void AddNewResponse(Response response)
+        {
+            Context.Responses.Add(response);
+            Context.SaveChanges();
         }
     }
 }

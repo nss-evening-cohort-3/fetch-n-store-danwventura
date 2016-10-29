@@ -15,7 +15,8 @@ namespace FetchNStore.Migrations
                         Status_Code = c.Int(nullable: false),
                         Method = c.String(nullable: false),
                         URL = c.String(nullable: false),
-                        Response_Time = c.Int(nullable: false),
+                        Response_Time = c.String(nullable: false),
+                        TimeOfDay = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Response_ID);
             

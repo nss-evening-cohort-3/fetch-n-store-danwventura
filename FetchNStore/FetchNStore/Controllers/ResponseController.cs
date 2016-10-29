@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FetchNStore.DAL;
+using FetchNStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +11,22 @@ namespace FetchNStore.Controllers
 {
     public class ResponseController : ApiController
     {
+        ResponseRepository repo = new ResponseRepository();
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public List<Response> Get()
         {
-            return new string[] { "value1", "value2" };
+            
+            List<Response> all_responses = repo.GetAllResponses();
+
+            return all_responses;
+
+            //foreach (var each_response in all_responses)
+            //{
+            //    Response this_response = each_response;
+            //}
+
+
+            
         }
 
         // GET api/<controller>/5
@@ -22,8 +36,9 @@ namespace FetchNStore.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Response response)
         {
+            repo.AddNewResponse(response);
         }
 
         // PUT api/<controller>/5

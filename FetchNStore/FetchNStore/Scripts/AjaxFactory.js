@@ -42,7 +42,27 @@
         })
     }
 
+    var PostNewResponse = function (response) {
+        console.log("called POST method")
+        $http({
+                data: response,
+                method: 'POST',
+                url: '/api/Response'
+            }).success(function () {
+
+                console.log("success");
+
+            }).error(function (error) {
+
+                console.log (error)
+            })
+               
+
+        
+
+    }
 
 
-    return {MakeAjaxGetMethodCall:MakeAjaxGetMethodCall, MakeAjaxHeadMethodCall:MakeAjaxHeadMethodCall}
+
+    return {MakeAjaxGetMethodCall:MakeAjaxGetMethodCall, MakeAjaxHeadMethodCall:MakeAjaxHeadMethodCall, PostNewResponse:PostNewResponse}
 });
